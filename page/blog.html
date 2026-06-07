@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebel Rover Kloni</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- Drawer Overlay -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-black/60 z-30 hidden backdrop-blur-sm transition-opacity duration-300" onclick="closeDrawer()"></div>
+
+  <!-- Drawer (chap tomondan) -->
+  <div id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen w-80 bg-gradient-to-b from-blue-900 to-blue-800 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-white/20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="bg-orange-500 p-2 rounded-full">
+          <i class="fas fa-plane text-white text-lg"></i>
+        </div>
+        <span class="text-xl font-black tracking-tighter uppercase text-white">Rebel Rover</span>
+      </div>
+      <button onclick="closeDrawer()" class="text-white/70 hover:text-orange-400 transition p-2 rounded-lg hover:bg-white/10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Menu -->
+    <div class="p-6 overflow-y-auto h-[calc(100vh-80px)]">
+      <ul class="space-y-3">
+        <li>
+          <a href="../index.html" class="flex items-center gap-3 px-5 py-4 text-white border-2 border-white/30 rounded-xl bg-blue-800/50 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 group">
+            <i class="fas fa-home text-orange-400 group-hover:text-white transition"></i>
+            <span class="font-medium">Bosh sahifa</span>
+          </a>
+        </li>
+        <li>
+          <a href="./AboutUs.html" class="flex items-center gap-3 px-5 py-4 text-white border-2 border-white/30 rounded-xl bg-blue-800/50 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 group">
+            <i class="fas fa-users text-orange-400 group-hover:text-white transition"></i>
+            <span class="font-medium">Biz haqimizda</span>
+          </a>
+        </li>
+        <li>
+          <a href="./package.html" class="flex items-center gap-3 px-5 py-4 text-white border-2 border-white/30 rounded-xl bg-blue-800/50 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 group">
+            <i class="fas fa-suitcase text-orange-400 group-hover:text-white transition"></i>
+            <span class="font-medium">Turpaketlar</span>
+          </a>
+        </li>
+        <li>
+          <a href="./blog.html" class="flex items-center gap-3 px-5 py-4 text-white border-2 border-white/30 rounded-xl bg-blue-800/50 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 group">
+            <i class="fas fa-blog text-orange-400 group-hover:text-white transition"></i>
+            <span class="font-medium">Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html" class="flex items-center gap-3 px-5 py-4 text-white border-2 border-white/30 rounded-xl bg-blue-800/50 hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 group">
+            <i class="fas fa-envelope text-orange-400 group-hover:text-white transition"></i>
+            <span class="font-medium">Aloqa</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Drawer Footer -->
+      <div class="mt-8 pt-6 border-t border-white/20">
+        <div class="flex items-center gap-3 text-white/70 hover:text-orange-400 transition cursor-pointer mb-4">
+          <i class="fas fa-search"></i>
+          <span class="text-sm">Qidirish</span>
+        </div>
+        <p class="text-xs text-white/50">© 2024 Rebel Rover</p>
+      </div>
+    </div>
+  </div>
+
+  <header data-aos="fade-up" class="hero-bg min-h-screen flex flex-col text-white">
+
+    <nav data-aos="fade-up" class="w-full border-b border-white/20">
+      <div data-aos="fade-up" class="max-w-[1300px] mx-auto px-4 py-5 flex items-center justify-between">
+
+        <div data-aos="fade-up" class="flex items-center gap-2 cursor-pointer">
+          <div class="bg-orange-500 p-2 rounded-full">
+            <i class="fas fa-plane text-white text-xl"></i>
+          </div>
+          <span class="text-2xl font-black tracking-tighter uppercase">Rebel Rover</span>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul data-aos="fade-up" class="hidden md:flex items-center gap-8 font-medium">
+          <a href="../index.html" class="hover:text-orange-400">Bosh sahifa</a>
+          <a href="./AboutUs.html" class="hover:text-orange-400">Biz haqimizda</a>
+          <a href="./package.html" class="hover:text-orange-400">Turpaketlar</a>
+          <a href="./blog.html" class="hover:text-orange-400">Blog</a>
+          <a href="./contact.html" class="hover:text-orange-400">Aloqa</a>
+        </ul>
+
+        <!-- Hamburger button (mobile only) -->
+        <button onclick="openDrawer()" class="md:hidden text-white text-xl focus:outline-none hover:text-orange-400 transition">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Search (desktop only) -->
+        <div data-aos="fade-up" class="hidden md:block cursor-pointer hover:text-orange-400 transition duration-300">
+          <i class="fas fa-search text-lg"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center">
+      <div data-aos="fade-up" class="max-w-[1300px] mx-auto px-4 text-center">
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          Hozirgi va Kelajakdagi <br> Sayohat Hikoyalari
+        </h1>
+
+        <div data-aos="fade-up" class="flex flex-wrap justify-center items-center gap-6 text-lg font-light italic">
+          <div data-aos="fade-up" class="flex items-center gap-2 hover:text-orange-400 transition cursor-pointer">
+            <i class="fas fa-user text-orange-400"></i>
+            <span>Hasmar</span>
+          </div>
+          <div data-aos="fade-up" class="flex items-center gap-2 hover:text-orange-400 transition cursor-pointer">
+            <i class="fas fa-calendar-alt text-orange-400"></i>
+            <span>18-Yanvar, 2021</span>
+          </div>
+          <div class="flex items-center gap-2 hover:text-orange-400 transition cursor-pointer">
+            <i class="fas fa-folder text-orange-400"></i>
+            <span>Hikoyalar, Maslahatlar</span>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </header>
+  <br>
+  <br>
+
+  <div class="max-w-[1300px] mx-auto px-4 mb-[30px]">
+    <div data-aos="fade-up" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <div data-aos="fade-up" class="lg:col-span-2">
+        <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+            alt="Sayohatchi" class="w-full h-auto object-cover">
+        </div>
+
+        <div data-aos="fade-up" class="text-gray-600 leading-relaxed space-y-6 text-lg">
+          <p>
+            Sayohat qilish — bu nafaqat yangi joylarni ko'rish, balki o'z ichki dunyongizni boyitish va mutlaqo boshqa
+            madaniyatlar bilan tanishish imkoniyatidir. Har bir bosilgan qadam, har bir yangi shahar sizga unutilmas
+            xotiralar va hayotiy tajriba taqdim etadi. Dunyo g'oyatda go'zal va kashf etilmagan sirlarga boy.
+          </p>
+          <p>
+            Yangi sayohatlarni rejalashtirishda har bir detalga e'tibor berish muhimdir: marshrutni tanlashdan tortib,
+            eng qulay turar joylarni band qilishgacha. Bizning blogimiz orqali siz eng sara sayohat maslahatlari,
+            hamyonbop marshrutlar va dunyoning eng yashirin go'zal go'shalari haqida foydali ma'lumotlarni bilib
+            olishingiz mumkin.
+          </p>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" class="space-y-8">
+
+        <div data-aos="fade-up" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold mb-6 border-b pb-3">Oxirgi Maqolalar</h3>
+          <div data-aos="fade-up" class="space-y-6">
+
+            <div data-aos="fade-up" class="flex gap-4 group cursor-pointer">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200" alt="post"
+                class="w-20 h-20 rounded-lg object-cover">
+              <div data-aos="fade-up">
+                <h4 class="font-bold text-sm group-hover:text-orange-500 transition">Hozirgi va kelajakdagi unutilmas
+                  sayohat hikoyalari</h4>
+                <p class="text-xs text-gray-400 mt-2">14 Dek 2022</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" class="flex gap-4 group cursor-pointer">
+              <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200" alt="post"
+                class="w-20 h-20 rounded-lg object-cover">
+              <div>
+                <h4 class="font-bold text-sm group-hover:text-orange-500 transition">Sotuvda bo'lgan 9 ta eng ommabop
+                  sayohat yo'nalishlari</h4>
+                <p class="text-xs text-gray-400 mt-2">14 Dek 2022</p>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" class="flex gap-4 group cursor-pointer">
+              <img
+                src="https://static2.tripoto.com/media/filter/tst/img/2025875/TripDocument/1601531054_these_traveling_tips_helps_me_having_hassle_free_journey.jpg"
+                alt="post" class="w-20 h-20 rounded-lg object-cover">
+              <div>
+                <h4 class="font-bold text-sm group-hover:text-orange-500 transition">Yangi mavsumda qanday sayohat
+                  qilamiz?</h4>
+                <p class="text-xs text-gray-400 mt-2">14 Dek 2022</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold mb-6 border-b pb-3">Ruknlar</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-gray-700 hover:text-orange-500 transition cursor-pointer group">
+              <span>Sayohat</span>
+            </li>
+            <li
+              class="flex items-center gap-3 text-gray-700 hover:text-orange-500 transition cursor-pointer group border-t pt-4">
+              <span>Maslahatlar</span>
+            </li>
+            <li
+              class="flex items-center gap-3 text-gray-700 hover:text-orange-500 transition cursor-pointer group border-t pt-4">
+              <span>Hikoyalar</span>
+            </li>
+            <li
+              class="flex items-center gap-3 text-gray-700 hover:text-orange-500 transition cursor-pointer group border-t pt-4">
+              <span>Yo'nalishlar</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div data-aos="fade-up"
+        class="max-w-[1300px] mx-auto overflow-hidden rounded-[40px] relative min-h-[400px] flex items-center justify-center mb-[30px]">
+
+        <div class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2000&auto=format&fit=crop"
+            alt="Dunyo xaritasi foni" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-blue-900/80 mix-blend-multiply"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 to-black/60"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-3xl px-6 py-16 text-center">
+
+          <h2 class="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            Maxsus narxlardan xabardor bo'lish uchun obuna bo'ling
+          </h2>
+
+          <p class="text-blue-100 text-sm md:text-base mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+            Hech bir yangilikni o'tkazib yubormang! Hoziroq obuna bo'ling, maxsus aksiyalar va oylik eng yaxshi
+            takliflarni qo'lga kiting.
+          </p>
+
+          <div class="relative max-w-2xl mx-auto group">
+            <div
+              class="flex items-center bg-white p-1.5 rounded-full shadow-lg transition-all duration-300 focus-within:ring-4 focus-within:ring-blue-500/30">
+              <input type="email" placeholder="Email manzilingizni kiriting"
+                class="w-full pl-6 pr-4 py-3 md:py-4 rounded-full text-gray-800 outline-none text-sm md:text-base placeholder:text-gray-400">
+              <button
+                class="bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold transition-all duration-300 hover:bg-gray-800 active:scale-95 shadow-md">
+                Obuna bo'lish
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src='https://cdn.jotfor.ms/agent/embedjs/019db9d565337f0e90978d28d8a8e9c2e008/embed.js'></script>
+
+  <script>
+    // Drawer functions
+    function openDrawer() {
+      document.getElementById('drawer-navigation').classList.remove('-translate-x-full');
+      document.getElementById('drawer-overlay').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawer-navigation').classList.add('-translate-x-full');
+      document.getElementById('drawer-overlay').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeDrawer();
+    });
+
+    AOS.init({ duration: 1000 });
+  </script>
+
+</body>
+
+</html>

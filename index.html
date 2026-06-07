@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebel Rover - Turizm Agentligi</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+<!-- From Uiverse.io by gagan-gv --> 
+<!-- From Uiverse.io by fanishah --> 
+<div class="loader">
+  <svg class="loader" viewBox="0 0 48 30" width="48px" height="30px">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+    <g transform="translate(9.5,19)">
+      <circle class="loader_tire" r="9" stroke-dasharray="56.549 56.549"></circle>
+      <g class="loader_spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+        <circle class="loader_spokes" r="5"></circle>
+        <circle class="loader_spokes" r="5" transform="rotate(180,0,0)"></circle>
+      </g>
+    </g>
+    <g transform="translate(24,19)">
+      <g class="loader_pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
+        <circle class="loader_pedals" r="4"></circle>
+        <circle class="loader_pedals" r="4" transform="rotate(180,0,0)"></circle>
+      </g>
+    </g>
+    <g transform="translate(38.5,19)">
+      <circle class="loader_tire" r="9" stroke-dasharray="56.549 56.549"></circle>
+      <g class="loader_spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+        <circle class="loader_spokes" r="5"></circle>
+        <circle class="loader_spokes" r="5" transform="rotate(180,0,0)"></circle>
+      </g>
+    </g>
+    <polyline class="loader_seat" points="14 3,18 3" stroke-dasharray="5 5"></polyline>
+    <polyline class="loader_body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79"></polyline>
+    <path class="loader_handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10"></path>
+    <polyline class="loader_front" points="32.5 2,38.5 19" stroke-dasharray="19 19"></polyline>
+  </g>
+</svg>
+</div>
+  <header class="absolute w-full z-50 py-6">
+    <div data-aos="fade-up" class="max-w-[1300px] mx-auto px-4">
+      <div class="flex justify-between items-center">
+
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <div class="bg-orange-500 p-2 rounded-lg group-hover:bg-orange-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </div>
+          <span class="text-white font-bold text-xl tracking-wider uppercase">Rebel Rover</span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-white font-medium">
+          <a href="../index.html" class="hover:text-orange-400 transition-colors">Bosh sahifa</a>
+          <a href="./page/AboutUs.html" class="hover:text-orange-400 transition-colors">Biz haqimizda</a>
+          <a href="./page/package.html" class="hover:text-orange-400 transition-colors">Sayohat paketlari</a>
+          <a href="./page/blog.html" class="hover:text-orange-400 transition-colors">Blog</a>
+          <a href="./page/contact.html" class="hover:text-orange-400 transition-colors">Aloqa</a>
+          <button class="hover:scale-110 transition-transform ml-4" aria-label="Qidiruv">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </nav>
+
+        <div class="md:hidden text-white cursor-pointer">
+
+          <div class="text-center">
+            <button class="inline-flex items-center justify-center text-white bg-brand " type="button"
+              data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+              aria-controls="drawer-navigation">
+              <img src="./menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="">
+            </button>
+          </div>
+
+          <div id="drawer-navigation"
+            class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform backdrop-blur-xl -translate-x-full bg-neutral-primary-soft w-80 border-e border-default"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+            <div class="border-b border-default pb-4 flex items-center">
+              <a href="https://flowbite.com/" class="flex items-center space-x-2 rtl:space-x-reverse">
+                <img src="./icons8-rebel.svg" class="h-6 w-6" alt="Flowbite Logo" />
+                <span class="self-center text-lg font-semibold whitespace-nowrap text-heading">REBEL ROVER</span>
+              </a>
+              <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6" />
+                </svg>
+                <span class="sr-only">Close menu</span>
+              </button>
+            </div>
+            <div class="py-5 overflow-y-auto ">
+              <ul class=" space-y-2 font-medium">
+                <li class="px-6 py-3  border-white border-[2px] bg-blue-900 rounded-[10px]">
+                  <a href="../index.html" class="hover:text-orange-400 transition-colors">Bosh sahifa</a>
+                </li>
+                <br>
+                <li class="px-6 py-3 border-white border-[2px] bg-blue-900 rounded-[10px]">
+                  <a href="./page/AboutUs.html" class="hover:text-orange-400 transition-colors">Biz haqimizda</a>
+                </li>
+                <br>
+                <li class="px-6 py-3 border-white border-[2px] bg-blue-900 rounded-[10px]">
+                  <a href="./page/package.html" class="hover:text-orange-400 transition-colors">Sayohat paketlari</a>
+                </li>
+                <br>
+                <li class="px-6 py-3 border-white border-[2px] bg-blue-900 rounded-[10px]">
+                  <a href="./page/blog.html" class="hover:text-orange-400 transition-colors">Blog</a>
+                </li>
+                <br>
+                <li class="px-6 py-3 border-white border-[2px] bg-blue-900 rounded-[10px]">
+                  <a href="./page/contact.html" class="hover:text-orange-400 transition-colors">Aloqa</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="relative h-screen flex items-center bg-cover bg-center bg-no-repeat" data-aos="fade-up"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');">
+      <div class="max-w-[1300px] mx-auto px-4 w-full pt-20">
+        <div class="max-w-2xl">
+          <h1 class="text-white text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+            Sayohatingizni <br> biz bilan <br> boshlang.
+          </h1>
+          <p class="text-white/90 text-lg md:text-xl mb-12 max-w-md">
+            Oʻzingiz sevgan goʻzal va betakror tabiat bagʻrida dunyoni kashf eting.
+          </p>
+
+          <div class="hidden md:grid grid-cols-4 bg-white/95 backdrop-blur-md p-2 pl-6 rounded-full items-center gap-2 shadow-2xl border border-gray-100 max-w-5xl mx-auto w-full transition-all duration-300 hover:bg-white">
+  
+  <label class="flex items-center gap-3 cursor-pointer group py-2 px-2 min-w-0">
+    <div class="p-3 bg-orange-50 rounded-full text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </div>
+    <div class="flex flex-col text-left min-w-0 flex-1">
+      <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider truncate">Qayerga?</span>
+      <select class="text-gray-900 text-sm font-bold bg-transparent border-none p-0 outline-none cursor-pointer appearance-none group-hover:text-orange-500 transition-colors w-full truncate pr-4">
+        <option value="" disabled selected>Manzilni tanlang</option>
+        <option value="samarkand">Samarqand</option>
+        <option value="bukhara">Buxoro</option>
+        <option value="khiva">Xiva</option>
+        <option value="tashkent">Toshkent</option>
+      </select>
+    </div>
+    <div class="h-8 w-[1px] bg-gray-200 ml-auto shrink-0 hidden group-hover:bg-transparent transition-colors"></div>
+  </label>
+
+  <label class="flex items-center gap-3 cursor-pointer group py-2 px-2 min-w-0 border-l border-gray-150 first:border-none">
+    <div class="p-3 bg-orange-50 rounded-full text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    </div>
+    <div class="flex flex-col text-left min-w-0 flex-1">
+      <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider truncate">Qachon?</span>
+      <input type="date" class="text-gray-900 text-sm font-bold bg-transparent border-none p-0 outline-none cursor-pointer group-hover:text-orange-500 transition-colors w-full block [color-scheme:light] focus:ring-0" />
+    </div>
+    <div class="h-8 w-[1px] bg-gray-200 ml-auto shrink-0 hidden group-hover:bg-transparent transition-colors"></div>
+  </label>
+
+  <label class="flex items-center gap-3 cursor-pointer group py-2 px-2 min-w-0 border-l border-gray-150">
+    <div class="p-3 bg-orange-50 rounded-full text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    </div>
+    <div class="flex flex-col text-left min-w-0 flex-1">
+      <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider truncate">Kimlar?</span>
+      <input type="number" min="1" max="10" placeholder="Odam soni" class="text-gray-900 text-sm font-bold bg-transparent border-none p-0 outline-none cursor-pointer group-hover:text-orange-500 transition-colors w-full placeholder-gray-900 focus:placeholder-gray-400 focus:ring-0" />
+    </div>
+  </label>
+
+  <div class="flex justify-end pl-2">
+    <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+      class="flex items-center justify-center gap-2 text-white bg-orange-500 hover:bg-orange-600 w-full py-4 rounded-full text-sm font-bold transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-600/30 transform active:scale-95 group select-none">
+      <span class="truncate">Hozir koʻrish</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </button>
+  </div>
+
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">
+        Egzotik tabiat manzaralari bilan yangi dunyolarni kashf eting
+      </h2>
+      <p class="text-gray-500 mb-12 max-w-xl mx-auto">
+        Oʻzingiz sevgan goʻzal va betakror tabiat bagʻrida dunyoni kashf eting.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-aos="zoom-in" class="bg-white rounded-[15px] shadow overflow-hidden">
+          <img src="db555f3a6f99f794dda68352ead6b66faf0400e3.png" alt="Rasimchilar xizmati"
+            class="w-full h-64 object-cover" />
+          <div class="p-4 text-left">
+            <h3 class="font-bold text-lg">RASIMCHILAR</h3>
+            <p class="text-gray-500 text-sm">arzon pulga chiroyli rasimga olib qoyishadi</p>
+          </div>
+        </div>
+        <div data-aos="zoom-in" class="bg-white rounded-[15px] shadow overflow-hidden">
+          <img src="bfe697bb42a4732759c3886831e2aa431d0dca08 (1).png" alt="Bali, Indoneziya"
+            class="w-full h-64 object-cover" />
+          <div class="p-4 text-left">
+            <h3 class="font-bold text-lg">Bali, Indoneziya.</h3>
+            <p class="text-gray-500 text-sm">Bali — juda goʻzal sayyohlik maskani boʻlib, u yerga koʻplab sayyohlar
+              tashrif buyurishadi.</p>
+          </div>
+        </div>
+        <div data-aos="zoom-in" class="bg-white rounded-[15px] shadow overflow-hidden">
+          <img src="260e72fe0cd0a6f456d438b297ea2c54b701200d.png" alt="AQSH haykali" class="w-full h-64 object-cover" />
+          <div class="p-4 text-left">
+            <h3 class="font-bold text-lg">AQSH</h3>
+            <p class="text-gray-500 text-sm">Ulug‘vor Ozodlik haykali erkinlik va porloq kelajak timsoli bo‘lib
+              yashnamoqda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1300px] mx-auto px-4 py-8">
+      <div
+        class="relative overflow-hidden rounded-2xl bg-gray-100 shadow-md hover:shadow-2xl transition-shadow duration-300 w-full">
+
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+          <div class="relative h-56 overflow-hidden md:h-96">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://olmos-travel.uz/wp-content/uploads/2025/01/thailand2.jpg"
+                class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Tailand manzarasi">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://content.centrum-air.com/media/content_images/02fc25ee-298f-43cc-a00b-97c43d6aae0c.jpg"
+                class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Sayohat yoʻnalishi">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://uz.bestmagistictour.uz/d/1647614583_16.webp"
+                class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Kurort hududi">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="https://travel.state.gov/en/international-travel/_jcr_content/root/container-hero/hero.coreimg.jpeg/1775052339020/international-travel.jpeg"
+                class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Xalqaro sayohat">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://travelsystem.uz/wp-content/uploads/2021/06/parizh.jpg"
+                class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="Parij arxitekturasi">
+            </div>
+          </div>
+
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1"
+              data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="false" aria-label="Slide 2"
+              data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="false" aria-label="Slide 3"
+              data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="false" aria-label="Slide 4"
+              data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="false" aria-label="Slide 5"
+              data-carousel-slide-to="4"></button>
+          </div>
+
+          <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+              class="border-[3px] border-gray-300 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+              <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m15 19-7-7 7-7" />
+              </svg>
+              <span class="sr-only">Oldingi</span>
+            </span>
+          </button>
+          <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+              class="border-[3px] border-gray-300 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+              <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m9 5 7 7-7 7" />
+              </svg>
+              <span class="sr-only">Keyingi</span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="max-w-[1300px] mx-auto px-4 py-12">
+      <div class="text-center mb-8">
+        <span class="text-gray-400 text-lg font-medium block mb-1">Galereya</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-black tracking-tight">Unutilmas lahzalar</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="relative group overflow-hidden rounded-2xl shadow-md aspect-[4/5] md:aspect-auto md:h-full">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80"
+            alt="Bali manzarasi"
+            class="w-full h-[700px] object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-6">
+            <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Bali</h3>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="relative group overflow-hidden rounded-2xl shadow-md aspect-[16/9] sm:col-span-2">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
+              alt="Dubay manzarasi"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5">
+              <h3 class="text-white text-xl md:text-2xl font-bold tracking-wide">Dubay</h3>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-2xl shadow-md aspect-square">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+              alt="Parij manzarasi"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5">
+              <h3 class="text-white text-xl md:text-2xl font-bold tracking-wide">Parij</h3>
+            </div>
+          </div>
+
+          <div class="relative group overflow-hidden rounded-2xl shadow-md aspect-square">
+            <img src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?auto=format&fit=crop&w=600&q=80"
+              alt="Italiya manzarasi"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5">
+              <h3 class="text-white text-xl md:text-2xl font-bold tracking-wide">Italiya</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-10">
+      <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/04/14/17/istock-958597180.jpg"
+              alt="Parij koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Parij</h3>
+              <span class="text-sm text-gray-500">$599 (3 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Parij goʻzal, romantik, tarixiy, mashhur, sayyohlar sevgan, ajoyib shahardir.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://asyaolson.com/wp-content/uploads/2023/12/4V3A4970-copy-3.jpg"
+              alt="Shveytsariya koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Shveytsariya</h3>
+              <span class="text-sm text-gray-500">$699 (5 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Shveytsariya goʻzal togʻlari, musaffo koʻllari, ajoyib tabiati bilan mashhur mamlakat.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://www.travelandleisure.com/thmb/nDDNqO2EctQhiIfZrxeXTF47zhE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-koh-phi-phi-PLACESTHAILAND1023-09b9d347b3cd4844b4ae19e4e06a9a6d.jpg"
+              alt="Tailand koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Tailand</h3>
+              <span class="text-sm text-gray-500">$559 (4 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Tailand goʻzal plyajlari, mazali taomlari, boy madaniyati bilan mashhur.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://media.istockphoto.com/id/1967673037/photo/jiufen-old-street-at-twilight-in-taipei-taiwan.jpg?s=612x612&w=0&k=20&c=jq3JcXEmvls26AG9_O8SbojoVUF9ocH8ci30phKtIFM="
+              alt="Tayvan koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Tayvan</h3>
+              <span class="text-sm text-gray-500">$259 (3 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Tayvan zamonaviy shaharlari, goʻzal tabiati, boy madaniyati bilan mashhur.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://www.travelanddestinations.com/wp-content/uploads/2020/05/Temples-in-Bali-Indonesia.jpg"
+              alt="Indoneziya koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Indoneziya</h3>
+              <span class="text-sm text-gray-500">$799 (6 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Indoneziya tropik orollari, goʻzal plyajlari, boy madaniyati bilan mashhur.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+          <div class="aspect-[4/3]">
+            <img src="https://images.trvl-media.com/place/6047873/15d3ae30-ef33-406e-971f-9520c03f1089.jpg"
+              alt="Singapur koʻrinishi" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-semibold text-lg">Singapur</h3>
+              <span class="text-sm text-gray-500">$599 (3 kun)</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-3">Singapur zamonaviy binolari, toza shahri, rivojlangan iqtisodi bilan mashhur.</p>
+            <div class="flex items-center justify-between">
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+              <button data-modal-target="booking-modal" data-modal-toggle="booking-modal"
+                class="bg-black text-white text-sm px-4 py-1.5 rounded-full hover:bg-red-800 transition-colors">
+                Hozir band qilish
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="relative my-12">
+      <div data-aos="fade-up" class="h-[250px] md:h-[300px] bg-cover bg-center flex items-center justify-center"
+        style="background-image: url('89e21b61609448342525c3d3d3418c51ab15c34f.png');">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 w-full max-w-6xl px-6">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-white text-center">
+            <div>
+              <h3 class="text-3xl font-bold">126</h3>
+              <p class="text-sm text-gray-200">Mamnun Mijozlar</p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold">230</h3>
+              <p class="text-sm text-gray-200">Yangi Sayyohlar</p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold">230</h3>
+              <p class="text-sm text-gray-200">Yoʻnalishlar</p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold">230</h3>
+              <p class="text-sm text-gray-200">Mukofotlar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="max-w-[1300px] mx-auto overflow-hidden rounded-[40px] relative min-h-[400px] flex items-center justify-center my-16">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2000&auto=format&fit=crop"
+          alt="Dunyo xaritasi" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-blue-900/80 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 to-black/60"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-3xl px-6 py-16 text-center">
+        <h2 class="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+          Maxsus narxlardan xabardor boʻlish uchun obuna boʻling
+        </h2>
+        <p class="text-blue-100 text-sm md:text-base mb-10 opacity-90 max-w-xl mx-auto leading-relaxed">
+          Yangiliklarni oʻtkazib yubormaslikni istaysizmi? Hozirroq obuna boʻling va har oylik maxsus chegirmalar hamda
+          aksiyalardan birinchilardan boʻlib xabardor boʻling.
+        </p>
+
+        <div class="relative max-w-2xl mx-auto group">
+          <div
+            class="flex items-center bg-white p-1.5 rounded-full shadow-lg transition-all duration-300 focus-within:ring-4 focus-within:ring-blue-500/30">
+            <input type="email" placeholder="Elektron pochtangizni kiriting"
+              class="w-full pl-6 pr-4 py-3 md:py-4 rounded-full text-gray-800 outline-none text-sm md:text-base placeholder:text-gray-400">
+            <button
+              class="bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold transition-all duration-300 hover:bg-gray-800 active:scale-95 shadow-md">
+              Obuna boʻlish
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="booking-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+      <div class="relative bg-white rounded-2xl shadow">
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
+          <h3 class="text-lg font-semibold text-gray-900">
+            Sayohatni bron qilish
+          </h3>
+          <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="booking-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Yopish</span>
+          </button>
+        </div>
+        <form class="p-4 md:p-5">
+          <div class="grid gap-4 mb-4 grid-cols-2">
+            <div class="col-span-2">
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Ism va Familiyangiz</label>
+              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5" placeholder="Ismingizni kiriting" required>
+            </div>
+            <div class="col-span-2">
+              <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Telefon raqamingiz</label>
+              <input type="tel" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5" placeholder="+998 (90) 123-4567" required>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="tour-date" class="block mb-2 text-sm font-medium text-gray-900">Sana</label>
+              <input type="date" name="tour-date" id="tour-date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5" required>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="persons" class="block mb-2 text-sm font-medium text-gray-900">Odam soni</label>
+              <select id="persons" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5">
+                <option selected value="1">1 kishi</option>
+                <option value="2">2 kishi</option>
+                <option value="3">3 kishi</option>
+                <option value="4">4 kishi va undan ko'p</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="w-full text-white inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors">
+            Ariza yuborish
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer data-aos="fade-up" class="bg-white border-t border-gray-100 mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4 text-sm text-gray-600">
+      <div>
+        <h2 class="text-xl font-bold text-blue-900 uppercase tracking-wide">REBEL ROVER</h2>
+        <p class="mt-3 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quamquam provident nobis consequatur.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-3 text-base">Aloqa maʼlumotlari</h3>
+        <ul class="space-y-2">
+          <li>Toshkent shahar, Bektemir tumani</li>
+          <li>+990959008411</li>
+          <li>example@mail.com</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-800 mb-3 text-base">Tezkor havolalar</h3>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="hover:text-blue-600 transition-colors">Bosh sahifa</a></li>
+          <li><a href="./page/AboutUs.html" class="hover:text-blue-600 transition-colors">Biz haqimizda</a></li>
+          <li><a href="./page/package.html" class="hover:text-blue-600 transition-colors">Turlar</a></li>
+          <li><a href="./page/blog.html" class="hover:text-blue-600 transition-colors">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800 mb-3 text-base">Bizni kuzating</h3>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img class="w-[40px] h-[40px] object-cover rounded-md"
+              src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img class="w-[40px] h-[40px] object-cover rounded-md"
+              src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png"
+              alt="Facebook">
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <img class="w-[40px] h-[40px] object-cover rounded-md"
+              src="https://e7.pngegg.com/pngimages/708/311/png-clipart-twitter-twitter-thumbnail.png" alt="Twitter">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-200 text-center text-xs py-4 text-gray-600">
+      Mualliflik huquqi himoyalangan © | Veb-sayt SMIT tomonidan ishlab chiqildi va boshqariladi
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./main.js"></script>
+  <script src="https://cdn.jotfor.ms/agent/embedjs/019db9d565337f0e90978d28d8a8e9c2e008/embed.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>
